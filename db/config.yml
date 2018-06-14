@@ -1,0 +1,9 @@
+default: &default
+  adapter: sqlite3
+  database: bool_at
+
+development:
+  <<: *default
+
+test:
+  <<: *default
