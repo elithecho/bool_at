@@ -22,8 +22,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Not recommending old ActiveRecord version but good tj<t_úX> support
-  spec.add_runtime_dependency 'activerecord',  ['>= 4.2.1']
-  spec.add_runtime_dependency 'activesupport', ['>= 4.2.1']
+  spec.add_dependency 'activerecord', '>= 4.2.1'
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "pry", "~>0.11.3"
@@ -31,5 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "rubocop", "~> 0.48.1"
   spec.add_development_dependency "sqlite3", "1.3.13"
-  spec.add_development_dependency "standalone_migrations", "~> 5.2.0", ">= 4.2.0"
+  spec.add_development_dependency "standalone_migrations", "~> 5.2.0", ">= 4.2.1"
 end
