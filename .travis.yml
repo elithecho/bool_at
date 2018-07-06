@@ -8,10 +8,9 @@ before_install:
   - gem update --system
   - gem --version
   - gem install bundler
-before_script:
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
 cache: bundler
+script:
+  - bundle exec rspec
 gemfile:
   - gemfiles/rails_4.2.gemfile
   - gemfiles/rails_5.gemfile

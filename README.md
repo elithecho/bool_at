@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/choonggg/bool_at.svg?branch=master)](https://travis-ci.org/choonggg/bool_at)
 
+
 ## Installation
 
 Add this line to your application's Gemfile:

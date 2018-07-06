@@ -1,8 +1,8 @@
-require "bundler/setup"
-require "bool_at"
-require "pry"
+# frozen_string_literal: true
 
-require "active_record/railtie"
+require "bool_at"
+
+$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.logger.level = 3
 
