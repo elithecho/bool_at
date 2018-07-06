@@ -5,7 +5,7 @@ module BoolAt
     module ClassMethods
       def bool_at(*keys)
         keys.each do |key|
-          if !key.to_s.include?("_at")
+          unless key.to_s.include?("_at")
             raise ArgumentError, "bool_at keys should be prefixed with `_at'"
           end
 

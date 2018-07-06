@@ -2,10 +2,9 @@ require "bundler/setup"
 require "bool_at"
 require "pry"
 
-require 'active_record/railtie'
+require "active_record/railtie"
 ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.logger.level = 3
-
 
 class Post < ActiveRecord::Base; end
 
@@ -25,8 +24,8 @@ RSpec.configure do |config|
 
     ActiveRecord::Base.establish_connection(
       adapter: "sqlite3",
-      encoding: 'unicode',
-      database: "bool_at_test",
+      encoding: "unicode",
+      database: "bool_at_test"
     )
     create_database
   end
@@ -41,7 +40,7 @@ RSpec.configure do |config|
 end
 
 def create_database
-  ActiveRecord::Schema.define(:version => 1) do
+  ActiveRecord::Schema.define(version: 1) do
     create_table :posts do |t|
       t.timestamp :published_at
       t.timestamps null: true

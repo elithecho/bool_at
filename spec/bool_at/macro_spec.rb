@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 RSpec.describe BoolAt::Macro do
   before do
@@ -26,7 +26,7 @@ RSpec.describe BoolAt::Macro do
     context "#bool! method" do
       it "sets published_at when banging bool_at method" do
         post = Post.new
-        expect{ post.published! }.to change{ post.published_at }.from(nil)
+        expect { post.published! }.to change { post.published_at }.from(nil)
       end
 
       it "sets date now" do

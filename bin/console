@@ -4,7 +4,7 @@ require "bundler/setup"
 require "bool_at"
 require "rspec"
 
-dbconfig = YAML.load(File.open("db/config.yml"))
+dbconfig = YAML.safe_load(File.open("db/config.yml"))
 ActiveRecord::Base.establish_connection(dbconfig["development"])
 
 # You can add fixtures and/or initialization code here to make experimenting
