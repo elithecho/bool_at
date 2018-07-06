@@ -12,5 +12,5 @@ module BoolAt
 end
 
 ActiveSupport.on_load(:active_record) do
-  include BoolAt::Macro
+  ActiveRecord::Base.send(:include, BoolAt)
 end
