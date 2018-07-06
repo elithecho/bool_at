@@ -21,6 +21,8 @@ RSpec.configure do |config|
   end
 
   config.before(:all) do
+    Time.zone = "Singapore"
+
     ActiveRecord::Base.establish_connection(
       adapter: "sqlite3",
       encoding: 'unicode',

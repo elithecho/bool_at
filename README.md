@@ -26,11 +26,19 @@ bool_at converts timestamps `time_at` methods into boolean
 
 Add `bool_at` to your model
 
-### Using
 ```
 class Post < ActiveRecord::Base
   bool_at :published_at
 end
+```
+
+These methods will be available
+
+```
+post = Post.new
+post.published? #=> false
+post.published!
+post.published? #=> true
 ```
 
 ### Methods

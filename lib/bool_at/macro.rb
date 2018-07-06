@@ -17,7 +17,7 @@ module BoolAt
           end
 
           define_method(:"#{method_name}!") do
-            send(:"#{key_attribute}=", Time.now)
+            send(:"#{key_attribute}=", Time.zone.now)
           end
         end
       end
