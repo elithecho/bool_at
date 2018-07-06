@@ -22,7 +22,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+bool_at converts timestamps `time_at` methods into boolean
+
+Add `bool_at` to your model
+
+### Using
+```
+class Post < ActiveRecord::Base
+  bool_at :published_at
+end
+```
+
+### Methods
+
+It adds `!` and `?` method to your timestamps without `_at` prefix
 
 ## Development
 
