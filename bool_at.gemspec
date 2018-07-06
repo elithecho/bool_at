@@ -21,8 +21,9 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  # Not recommending old ActiveRecord version but good to support
-  spec.add_dependency "activerecord", "~>5.2", ">= 4.2.0"
+  # Not recommending old ActiveRecord version but good tj<t_úX> support
+  spec.add_runtime_dependency 'activerecord',  ['>= 4.2.1']
+  spec.add_runtime_dependency 'activesupport', ['>= 4.2.1']
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "pry", "~>0.11.3"
