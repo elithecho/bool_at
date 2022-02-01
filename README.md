@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/choonggg/bool_at.svg?branch=master)](https://travis-ci.org/choonggg/bool_at)
-
+[![CircleCI](https://circleci.com/gh/elithecho/bool_at/tree/master.svg?style=svg)](https://circleci.com/gh/elithecho/bool_at/tree/master)
 
 ## Installation
 

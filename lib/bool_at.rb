@@ -12,5 +12,5 @@ module BoolAt
 end
 
 ActiveSupport.on_load(:active_record) do
-  ActiveRecord::Base.send(:include, BoolAt)
+  ActiveRecord::Base.include BoolAt
 end
