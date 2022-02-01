@@ -21,13 +21,13 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  # Not recommending old ActiveRecord version but good tj<t_úX> support
-  spec.add_dependency 'activerecord', '>= 4.2.1'
+  # Not recommending old ActiveRecord version
+  spec.add_dependency 'activerecord', '>= 6'
 
-  spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_development_dependency "bundler", "~> 2.3.6"
   spec.add_development_dependency "pry", "~>0.11.3"
-  spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "rubocop", "~> 0.48.1"
-  spec.add_development_dependency "sqlite3", "1.3.13"
-  spec.add_development_dependency "standalone_migrations", "~> 5.2.0", ">= 4.2.1"
+  spec.add_development_dependency "rspec", "~> 3.10"
+  spec.add_development_dependency "rubocop", "~> 1.25.0"
+  spec.add_development_dependency "sqlite3", "1.4.2"
+  spec.add_development_dependency "standalone_migrations", ">= 6"
 end

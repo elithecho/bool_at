@@ -11,3 +11,6 @@
 .rspec_status
 
 .DS_Store
+
+.byebug_history
+bool_at_test
