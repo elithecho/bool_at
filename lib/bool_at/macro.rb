@@ -9,7 +9,6 @@ module BoolAt
           at_setter = "#{attr}_at="
           setter = "#{attr}="
           predicate = "#{attr}?"
-          bang = "#{attr}!"
 
           attribute attr, :boolean, default: false
 
@@ -20,7 +19,7 @@ module BoolAt
           # Changes dirty state in virtual attribute
           define_method setter do |value|
             super(value)
-            send(at_setter, self[attr] ? Time.current : nil)
+            send(at_setter, self[attr] ? Time.now : nil)
           end
 
           define_method attr do
@@ -30,10 +29,6 @@ module BoolAt
           define_method at_setter do |value|
             self[attr] = value.present?
             super(value)
-          end
-
-          define_method bang do
-            send(setter, Time.current)
           end
 
           alias_method predicate, attr

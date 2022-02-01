@@ -23,16 +23,18 @@ RSpec.describe BoolAt::Macro do
       end
     end
 
-    context "#bool! method" do
-      it "sets published_at when banging bool_at method" do
+    describe "setter" do
+      it "sets time on current value" do
         post = Post.new
-        expect { post.published! }.to change { post.published_at }.from(nil)
+        post.published = true
+        expect(post.published?).to be true
+        expect(post.published_at).to be_a(Time)
       end
 
-      it "sets date now" do
-        post = Post.new
-        post.published!
-        expect(post.published_at).to be_a(Time)
+      it "removes value if nil" do
+        post = Post.new(published_at: Time.current)
+        post.published = false
+        expect(post.published?).to be false
       end
     end
   end

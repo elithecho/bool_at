@@ -34,13 +34,24 @@ These methods will be available
 ```
 post = Post.new
 post.published? #=> false
-post.published!
+
+post.published = true
 post.published? #=> true
+post.published_at #=> Will be set when published was assigned true
+```
+
+It also adds scope to your Rails model.
+
+```
+Post.published
+Post.not_published
+Post.order_published
+Post.reverse_published
 ```
 
 ### Methods
 
-It adds `!` and `?` method to your timestamps without `_at` prefix
+It adds and `?` method to your timestamps without `_at` prefix
 
 ## Development
 
