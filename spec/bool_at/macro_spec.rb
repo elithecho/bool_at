@@ -2,7 +2,7 @@ require "spec_helper"
 
 RSpec.describe BoolAt::Macro do
   before do
-    Post.bool_at :published_at
+    Post.bool_at :published
   end
 
   describe "#bool_at" do

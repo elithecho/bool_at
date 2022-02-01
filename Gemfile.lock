@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bool_at (0.1.0)
+    bool_at (0.2.0)
       activerecord (>= 6)
 
 GEM
