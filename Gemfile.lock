@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bool_at (0.2.0)
+    bool_at (0.2.1)
       activerecord (>= 6)
 
 GEM
@@ -123,4 +123,4 @@ DEPENDENCIES
   standalone_migrations (>= 6)
 
 BUNDLED WITH
-   2.3.6
+   2.3.9
