@@ -19,7 +19,7 @@ module BoolAt
           # Changes dirty state in virtual attribute
           define_method setter do |value|
             super(value)
-            send(at_setter, self[attr] ? Time.now : nil)
+            send(at_setter, self[attr] ? self[at_attribute] || Time.now : nil)
           end
 
           define_method attr do

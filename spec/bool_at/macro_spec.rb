@@ -36,6 +36,14 @@ RSpec.describe BoolAt::Macro do
         post.published = false
         expect(post.published?).to be false
       end
+
+      it "keep time if already set" do
+        past_date = 2.days.ago.to_time
+        post = Post.new(published_at: past_date)
+        post.published = true
+        expect(post.published?).to be true
+        expect(post.published_at).to be past_date
+      end
     end
   end
 end
